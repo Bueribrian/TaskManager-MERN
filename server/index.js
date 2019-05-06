@@ -27,7 +27,7 @@ app.use('/task',taskRoutes)
 
 
 
-mongoose.connect('mongodb://localhost:27017/task-manager', { useNewUrlParser:true })
+mongoose.connect('mongodb://papaguacha:palermo1996@ds237855.mlab.com:37855/task-manager', { useNewUrlParser:true })
     .then(() => { 
         console.log('Mongoose conectado correctamente')
         app.listen(app.get('port'),()=>{
