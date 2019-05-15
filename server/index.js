@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 const app = express()
-var whitelist = ['http://localhost:3000']
+var whitelist = ['http://localhost:3000','http://localhost:3001']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -18,7 +18,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json())
 
-app.set('port', process.env.PORT || 5000)
+app.set('port',5000)
 
 // Router
 const taskRoutes = require('./routes/task.route')
